@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#009F9A">
+  <meta name="description" content="Explore Quick Power's testing equipment, sales enquiries, product assistance, downloads and contact information.">
+  <title>Quick Power | Testing Equipment, Sales &amp; Support</title>
+  <link rel="icon" type="image/png" href="assets/quick-power-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #171717;
+      --muted: #5e6968;
+      --brand: #009F9A;
+      --brand-dark: #007F7B;
+      --brand-pale: #E9F7F6;
+      --accent: #12AAA3;
+      --line: #d7e9e7;
+      --surface: #F7F6F2;
+      --white: #FBFAF7;
+      --content: 1200px;
+      --header-height: 82px;
+      --shadow: 0 16px 38px rgba(0, 0, 0, .09);
+      font-family: "Overpass", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 22px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-size: 16px; line-height: 1.65; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid rgba(0, 159, 154, .55); outline-offset: 3px; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 94px 0; }
+    .section--soft { background: var(--surface); }
+    .section-heading { max-width: 720px; margin: 0 auto 42px; text-align: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: var(--brand-dark);
+      font-size: .79rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 25px; height: 2px; background: var(--accent); content: ""; }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1, h2, h3, h4 { color: var(--ink); line-height: 1.16; }
+    h1 { margin-bottom: 20px; font-size: clamp(2.5rem, 5.1vw, 4.65rem); font-weight: 800; letter-spacing: -.045em; }
+    h2 { margin-bottom: 16px; font-size: clamp(2rem, 3.4vw, 3rem); font-weight: 700; letter-spacing: -.035em; }
+    h3 { margin-bottom: 12px; font-size: 1.32rem; font-weight: 700; }
+    .section-heading > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 1.08rem; }
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border: 1px solid var(--brand);
+      background: var(--brand);
+      color: var(--white);
+      font-size: .96rem;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); border-color: var(--brand-dark); background: var(--brand-dark); }
+    .button--outline { background: transparent; color: var(--brand-dark); }
+    .button--outline:hover { background: var(--brand); color: var(--white); }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--brand-dark); font-weight: 700; }
+    .text-link:hover { color: var(--ink); }
+    .arrow { transition: transform .18s ease; }
+    .text-link:hover .arrow { transform: translateX(4px); }
+
+    .utility-bar { background: var(--surface); color: var(--muted); font-size: .86rem; }
+    .utility-inner { display: flex; min-height: 38px; align-items: center; justify-content: space-between; gap: 18px; }
+    .utility-group { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+    .utility-bar a:hover { color: var(--brand-dark); }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.97); }
+    .header-inner { display: flex; min-height: var(--header-height); align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; flex: 0 1 232px; align-items: center; }
+    .brand img { width: 160px; height: 120px; object-fit: contain; }
+    .primary-nav { display: flex; align-items: center; gap: clamp(16px, 2.2vw, 30px); }
+    .nav-link, .nav-dropdown summary { color: var(--ink); font-size: .95rem; font-weight: 600; transition: color .18s ease; }
+    .nav-link:hover, .nav-dropdown summary:hover, .nav-link[aria-current="page"] { color: var(--brand-dark); }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown summary { display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; }
+    .nav-dropdown summary::-webkit-details-marker { display: none; }
+    .nav-dropdown summary::after { width: 7px; height: 7px; transform: translateY(-2px) rotate(45deg); border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; content: ""; }
+    .dropdown-menu { position: absolute; top: calc(100% + 17px); left: -18px; z-index: 2; width: 255px; padding: 9px; border: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow); }
+    .dropdown-menu a { display: block; padding: 10px 12px; color: var(--ink); font-size: .91rem; }
+    .dropdown-menu a:hover { background: var(--brand-pale); color: var(--brand-dark); }
+    .header-cta { min-height: 44px; padding: 10px 18px; white-space: nowrap; }
+    .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid var(--line); background: var(--white); color: var(--ink); cursor: pointer; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { display: block; width: 19px; height: 2px; background: currentColor; content: ""; }
+    .menu-toggle span { position: relative; }
+    .menu-toggle span::before { position: absolute; top: -6px; }
+    .menu-toggle span::after { position: absolute; top: 6px; }
+
+    .hero { position: relative; overflow: hidden; padding: 72px 0 76px; background: var(--white); }
+    .hero::after { position: absolute; right: -100px; bottom: -240px; width: 540px; height: 540px; border: 1px solid var(--brand-pale); border-radius: 50%; content: ""; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; min-height: 500px; align-items: center; grid-template-columns: 1.04fr .96fr; gap: 42px; }
+    .hero-copy { max-width: 610px; }
+    .hero-copy h1 span { color: var(--brand); }
+    .hero-copy > p { max-width: 560px; margin-bottom: 26px; color: var(--muted); font-size: 1.13rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 30px; color: var(--muted); font-size: .91rem; }
+    .hero-note strong { color: var(--ink); }
+    .hero-note-mark { display: grid; width: 34px; height: 34px; place-items: center; background: var(--brand-pale); color: var(--brand-dark); font-size: .8rem; font-weight: 800; }
+    .hero-visual { position: relative; min-height: 438px; display: grid; place-items: center; }
+    .hero-image-wrap { position: relative; display: grid; width: min(100%, 550px); height: 440px; place-items: center; }
+    .hero-image-wrap::before { position: absolute; inset: 34px 20px 10px 34px; background: var(--brand-pale); content: ""; }
+    .hero-image { position: relative; z-index: 1; width: 94%; height: 100%; object-fit: contain; }
+    .shape { position: absolute; z-index: 2; width: 22px; height: 22px; }
+    .shape--primary { top: 48px; right: 12%; background: var(--brand); }
+    .shape--accent { bottom: 60px; left: 3%; background: var(--accent); }
+    .hero-caption { position: absolute; right: 0; bottom: 20px; z-index: 3; max-width: 225px; padding: 17px 19px; border-left: 3px solid var(--brand); background: var(--white); box-shadow: var(--shadow); }
+    .hero-caption strong { display: block; font-size: 1.08rem; }
+    .hero-caption span { color: var(--muted); font-size: .86rem; }
+
+    .category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .category-card { min-height: 224px; padding: 24px 22px 21px; border: 1px solid var(--line); background: var(--white); transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+    .category-card:hover, .category-card:focus-within, .category-card:active { transform: translateY(-4px); border-color: var(--accent); background: var(--brand-pale); box-shadow: var(--shadow); }
+    .category-card.is-selected { border: 2px solid var(--brand); background: var(--brand-pale); box-shadow: var(--shadow); }
+    .category-card img { width: 74px; height: 74px; margin-bottom: 22px; object-fit: contain; }
+    .category-card h3 { margin-bottom: 8px; font-size: 1.13rem; }
+    .category-card p { margin-bottom: 15px; color: var(--muted); font-size: .9rem; }
+    .category-card .text-link { font-size: .88rem; }
+
+    .about-grid { display: grid; align-items: center; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 78px); }
+    .about-photo { position: relative; min-height: 420px; }
+    .about-photo::before { position: absolute; top: 20px; right: 20px; bottom: -20px; left: -20px; border: 2px solid var(--accent); content: ""; }
+    .about-photo img { position: relative; z-index: 1; width: 100%; height: 420px; object-fit: cover; }
+    .about-copy p { color: var(--muted); }
+    .about-copy .eyebrow { margin-bottom: 12px; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 20px; margin: 24px 0 28px; padding: 0; list-style: none; }
+    .about-points li { display: flex; align-items: flex-start; gap: 10px; font-weight: 600; }
+    .check { display: inline-grid; flex: 0 0 21px; width: 21px; height: 21px; place-items: center; margin-top: 2px; background: var(--brand-pale); color: var(--brand-dark); font-size: .8rem; font-weight: 800; }
+    .certification { display: inline-flex; align-items: center; gap: 12px; margin-top: 26px; padding: 11px 15px; border: 1px solid var(--line); background: var(--white); }
+    .certification img { width: 35px; height: 35px; object-fit: cover; object-position: top; }
+    .certification strong { display: block; font-size: .92rem; }
+    .certification span { display: block; color: var(--muted); font-size: .8rem; }
+
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .product-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); background: var(--white); transition: box-shadow .2s ease, transform .2s ease; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .product-image { display: grid; height: 230px; place-items: center; overflow: hidden; background: var(--surface); }
+    .product-image img { width: 100%; height: 100%; padding: 20px; object-fit: contain; transition: transform .25s ease; }
+    .product-card:hover .product-image img { transform: scale(1.035); }
+    .product-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 21px; }
+    .product-label { margin-bottom: 9px; color: var(--brand-dark); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .product-copy h3 { min-height: 48px; margin-bottom: 10px; font-size: 1.16rem; }
+    .product-copy p { flex: 1; margin-bottom: 18px; color: var(--muted); font-size: .92rem; }
+    .product-copy .text-link { margin-top: auto; font-size: .91rem; }
+    .product-note { margin: 24px auto 0; color: var(--muted); font-size: .9rem; text-align: center; }
+    .products-footer { display: flex; justify-content: center; margin-top: 32px; }
+    .product-detail[hidden] { display: none; }
+    .product-detail-breadcrumb { margin-bottom: 28px; color: var(--muted); font-size: .9rem; }
+    .product-detail-breadcrumb a { color: var(--brand-dark); font-weight: 700; }
+    .product-detail-grid { display: grid; align-items: start; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); }
+    .product-detail-visual { display: grid; min-height: 390px; place-items: center; background: var(--surface); }
+    .product-detail-visual img { width: 100%; height: 390px; padding: 28px; object-fit: contain; }
+    .product-visual-note { margin: 12px 0 0; color: var(--muted); font-size: .82rem; text-align: center; }
+    .product-detail-copy > p:not(.eyebrow) { color: var(--muted); }
+    .product-detail-copy h1 { font-size: clamp(2.15rem, 4vw, 3.5rem); }
+    .product-detail-copy h2 { margin: 27px 0 12px; font-size: 1.38rem; letter-spacing: 0; }
+    .product-detail-copy ul { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .product-detail-copy li { display: flex; align-items: flex-start; gap: 10px; }
+    .product-detail-copy li::before { flex: 0 0 8px; width: 8px; height: 8px; margin-top: .63em; background: var(--brand); content: ""; }
+    .product-detail-specifications { margin-top: 34px; }
+    .product-detail-specifications h2 { margin-bottom: 14px; font-size: 1.5rem; }
+    .product-detail-table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--white); }
+    .product-detail-table { width: 100%; border-collapse: collapse; text-align: left; }
+    .product-detail-table th, .product-detail-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .product-detail-table thead th { background: var(--brand-pale); color: var(--ink); font-weight: 800; }
+    .product-detail-table tbody th { width: 30%; font-weight: 700; }
+    .product-detail-table tbody tr:last-child th, .product-detail-table tbody tr:last-child td { border-bottom: 0; }
+    .product-detail-specification-note { margin: 12px 0 0; color: var(--muted); font-size: .88rem; }
+
+    .proof-band { padding: 32px 0; background: var(--brand); color: var(--white); }
+    .proof-grid { display: grid; align-items: center; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .proof-item { padding: 5px 16px; border-right: 1px solid rgba(255,255,255,.22); text-align: center; }
+    .proof-item:last-child { border: 0; }
+    .proof-item strong { display: block; color: var(--white); font-size: 1.25rem; }
+    .proof-item span { color: var(--brand-pale); font-size: .88rem; }
+
+    .client-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+    .client-logo { display: grid; min-height: 102px; place-items: center; padding: 14px; border: 1px solid var(--line); background: var(--white); }
+    .client-logo img { width: 100%; max-width: 130px; height: 62px; object-fit: contain; }
+    .client-note { margin: 20px 0 0; color: var(--muted); font-size: .87rem; text-align: center; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .why-card { padding: 26px; border-top: 3px solid var(--brand); background: var(--white); }
+    .why-number { display: inline-block; margin-bottom: 17px; color: var(--brand); font-size: .84rem; font-weight: 800; letter-spacing: .12em; }
+    .why-card p { margin-bottom: 0; color: var(--muted); font-size: .95rem; }
+
+    .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .blog-card { border: 1px solid var(--line); background: var(--white); transition: box-shadow .2s ease, transform .2s ease; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .blog-card img { width: 100%; aspect-ratio: 1.5; object-fit: cover; background: var(--surface); }
+    .blog-card--tensile img { object-fit: contain; background: var(--white); }
+    .blog-card--salt-spray img { object-fit: contain; background: var(--white); }
+    .blog-card--cyclic-corrosion img { object-fit: contain; background: var(--white); }
+    .blog-copy { padding: 21px; }
+    .blog-copy time { display: block; margin-bottom: 10px; color: var(--brand-dark); font-size: .81rem; font-weight: 700; }
+    .blog-copy h3 { min-height: 56px; margin-bottom: 12px; font-size: 1.19rem; }
+    .blog-copy p { margin-bottom: 16px; color: var(--muted); font-size: .93rem; }
+    .blog-readmore summary { display: inline-flex; align-items: center; gap: 8px; color: var(--brand-dark); font-weight: 700; cursor: pointer; list-style: none; }
+    .blog-readmore summary::-webkit-details-marker { display: none; }
+    .blog-readmore summary:hover { color: var(--ink); }
+    .blog-readmore p { margin: 14px 0 0; color: var(--muted); font-size: .93rem; }
+
+    .faq-list { max-width: 860px; margin: 0 auto; border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { position: relative; padding: 21px 42px 21px 2px; color: var(--ink); font-size: 1.04rem; font-weight: 700; cursor: pointer; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; top: 50%; right: 8px; width: 11px; height: 11px; transform: translateY(-65%) rotate(45deg); border-right: 2px solid var(--brand); border-bottom: 2px solid var(--brand); content: ""; }
+    .faq-list details[open] summary::after { transform: translateY(-25%) rotate(225deg); }
+    .faq-list details p { max-width: 760px; margin: -4px 42px 20px 2px; color: var(--muted); }
+
+    .contact-cta { padding: 46px 0; background: var(--brand); color: var(--white); }
+    .contact-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact-cta h2 { max-width: 700px; margin: 0; color: var(--white); font-size: clamp(1.75rem, 3vw, 2.45rem); }
+    .contact-cta .button { flex: 0 0 auto; border-color: var(--white); background: var(--white); color: var(--brand-dark); }
+    .contact-cta .button:hover { border-color: var(--brand-pale); background: var(--brand-pale); }
+
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; }
+    .contact-info > p { color: var(--muted); }
+    .contact-items { display: grid; gap: 20px; margin: 27px 0; }
+    .contact-item { display: grid; align-items: start; grid-template-columns: 42px 1fr; gap: 13px; }
+    .contact-icon { display: grid; width: 42px; height: 42px; place-items: center; background: var(--brand-pale); color: var(--brand-dark); font-weight: 800; }
+    .contact-item strong { display: block; margin-bottom: 2px; }
+    .contact-item span, .contact-item a { color: var(--muted); font-size: .95rem; }
+    .contact-item a:hover { color: var(--brand-dark); }
+    .map-frame { width: 100%; height: 235px; border: 1px solid var(--line); }
+    .contact-form { padding: 30px; border: 1px solid var(--line); background: var(--surface); }
+    .contact-form h3 { margin-bottom: 7px; font-size: 1.45rem; }
+    .contact-form > p { margin-bottom: 22px; color: var(--muted); font-size: .95rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field--wide { grid-column: 1 / -1; }
+    .field label { color: var(--ink); font-size: .9rem; font-weight: 700; }
+    .field input, .field textarea { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0; background: var(--white); color: var(--ink); }
+    .field textarea { min-height: 125px; resize: vertical; }
+    .field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+    .form-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 18px; }
+    .form-message { margin: 0; color: var(--brand-dark); font-size: .9rem; }
+    .form-note { margin: 14px 0 0; color: var(--muted); font-size: .81rem; }
+
+    .site-footer { padding: 55px 0 0; background: var(--ink); color: var(--brand-pale); }
+    .footer-grid { display: grid; grid-template-columns: 1.35fr .8fr 1fr; gap: 45px; padding-bottom: 40px; }
+    .footer-brand > a { position: relative; display: grid; width: min(335px, 100%); height: 210px; place-items: center; padding: 0; background: transparent; }
+    .footer-cloud-shape { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .footer-brand img { position: relative; z-index: 1; width: min(220px, 96%); height: auto; margin-top: 12px; object-fit: contain; }
+    .footer-brand p { max-width: 340px; margin: 19px 0 0; color: var(--brand-pale); font-size: .94rem; }
+    .footer-col h3 { margin-bottom: 17px; color: var(--white); font-size: 1rem; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a { color: var(--brand-pale); font-size: .93rem; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { padding: 17px 0; border-top: 1px solid rgba(255,255,255,.15); color: var(--brand-pale); font-size: .85rem; }
+    .footer-bottom-inner { display: flex; align-items: center; justify-content: center; gap: 15px; text-align: center; }
+    .footer-bottom-inner > a { display: none; }
+    .whatsapp {
+      position: fixed;
+      z-index: 15;
+      right: 22px;
+      bottom: 22px;
+      display: grid;
+      width: 56px;
+      height: 56px;
+      place-items: center;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      background: #25D366;
+      box-shadow: 0 5px 18px rgba(0,0,0,.2);
+      color: var(--white);
+      transition: transform .18s ease, background-color .18s ease;
+    }
+    .whatsapp svg { width: 31px; height: 31px; fill: currentColor; }
+    .whatsapp:hover { transform: translateY(-3px); background: #1DA851; }
+
+    @media (max-width: 1000px) {
+      :root { --header-height: 74px; }
+      .primary-nav { gap: 15px; }
+      .nav-link, .nav-dropdown summary { font-size: .9rem; }
+      .header-cta { padding-inline: 14px; }
+      .product-grid, .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .product-image { height: 260px; }
+      .client-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .hero-grid { gap: 20px; }
+    }
+    @media (max-width: 800px) {
+      .container { width: min(var(--content), calc(100% - 36px)); }
+      .section { padding: 72px 0; }
+      .utility-inner { justify-content: center; }
+      .utility-group:first-child { display: none; }
+      .header-inner { position: relative; gap: 12px; }
+      .brand { flex-basis: 200px; }
+      .brand img { width: 144px; height: 108px; }
+      .menu-toggle { display: inline-flex; margin-left: auto; }
+      .header-cta { min-height: 42px; padding: 9px 13px; font-size: .88rem; }
+      .primary-nav { position: absolute; top: 100%; right: -16px; left: -16px; display: none; align-items: stretch; gap: 0; padding: 9px 18px 17px; border-bottom: 1px solid var(--line); background: var(--white); box-shadow: 0 14px 22px rgba(0,0,0,.08); }
+      .primary-nav.is-open { display: flex; flex-direction: column; }
+      .nav-link, .nav-dropdown summary { display: flex; min-height: 44px; align-items: center; padding: 9px 4px; font-size: .98rem; }
+      .nav-dropdown { border-top: 1px solid var(--line); }
+      .dropdown-menu { position: static; width: auto; padding: 0 0 8px 13px; border: 0; box-shadow: none; }
+      .dropdown-menu a { padding: 8px 5px; }
+      .hero { padding: 48px 0 54px; }
+      .hero-grid { min-height: initial; grid-template-columns: 1fr; gap: 20px; }
+      .hero-copy { max-width: 690px; }
+      .hero-visual { min-height: 350px; }
+      .hero-image-wrap { height: 355px; }
+      .hero-caption { right: 4px; bottom: 9px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 38px; }
+      .product-detail-grid { grid-template-columns: 1fr; }
+      .product-detail-visual { min-height: 340px; }
+      .product-detail-visual img { height: 340px; }
+      .about-photo { max-width: 620px; min-height: 360px; margin: 0 auto; }
+      .about-photo img { height: 360px; }
+      .about-copy { max-width: 700px; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .proof-item:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.22); padding-bottom: 17px; }
+      .proof-item:nth-child(n+3) { padding-top: 17px; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .blog-card:last-child { grid-column: 1 / -1; max-width: calc(50% - 10px); }
+      .footer-grid { grid-template-columns: 1.1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(var(--content), calc(100% - 32px)); }
+      .section { padding: 58px 0; }
+      .utility-bar { font-size: .8rem; }
+      .utility-inner { min-height: 34px; }
+      .utility-group { gap: 12px; }
+      :root { --header-height: 68px; }
+      .brand { flex-basis: 160px; }
+      .brand img { width: 128px; height: 96px; }
+      .header-cta { min-height: 40px; padding: 8px 10px; font-size: .81rem; }
+      .hero { padding: 41px 0 45px; }
+      h1 { font-size: clamp(2.35rem, 11vw, 3.35rem); }
+      h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .hero-copy > p { font-size: 1rem; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .button { width: 100%; }
+      .hero-visual { min-height: 285px; }
+      .hero-image-wrap { height: 290px; }
+      .hero-caption { right: 0; bottom: 0; max-width: 190px; padding: 12px 14px; }
+      .hero-caption strong { font-size: .95rem; }
+      .hero-caption span { font-size: .78rem; }
+      .category-grid, .product-grid, .why-grid, .blog-grid { grid-template-columns: 1fr; }
+      .category-card { min-height: initial; }
+      .category-card img { margin-bottom: 14px; }
+      .product-image { height: 255px; }
+      .product-copy h3 { min-height: 0; }
+      .blog-card:last-child { grid-column: auto; max-width: none; }
+      .about-photo { min-height: 260px; }
+      .about-photo img { height: 260px; }
+      .product-detail-visual { min-height: 275px; }
+      .product-detail-visual img { height: 275px; padding: 18px; }
+      .about-photo::before { top: 12px; right: 12px; bottom: -12px; left: -12px; }
+      .about-points { grid-template-columns: 1fr; }
+      .proof-grid { gap: 10px; }
+      .proof-item { padding-inline: 7px; }
+      .proof-item strong { font-size: 1.08rem; }
+      .proof-item span { font-size: .79rem; }
+      .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact-cta { padding: 36px 0; }
+      .contact-cta-inner { align-items: flex-start; flex-direction: column; gap: 19px; }
+      .contact-cta .button { width: 100%; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field--wide { grid-column: auto; }
+      .contact-form { padding: 21px 17px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+      .footer-grid .footer-col:last-child { grid-column: 1 / -1; }
+      .footer-bottom-inner { flex-direction: column; gap: 4px; }
+      .whatsapp { right: 14px; bottom: 14px; width: 50px; height: 50px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="Quick Power home">
+        <img src="assets/quick-power-logo.png" alt="Quick Power logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html#home">Home</a>
+        <a class="nav-link" href="index.html#about">About</a>
+        <details class="nav-dropdown">
+          <summary>Products</summary>
+          <div class="dropdown-menu">
+            <a href="index.html#category-environmental">Environmental Testing</a>
+            <a href="index.html#category-plastic-rubber">Plastic &amp; Rubber Testing</a>
+            <a href="index.html#category-xenon-arc">Xenon Arc Testing</a>
+          </div>
+        </details>
+        <details class="nav-dropdown">
+          <summary>Sales &amp; Services</summary>
+          <div class="dropdown-menu">
+            <a href="sales-services.html#salt-spray-nozzle-enquiries">Salt Spray Nozzle</a>
+            <a href="sales-services.html#peristatic-pumps">Peristatic Pumps</a>
+            <a href="sales-services.html#geared-motor">Quickpower Components</a>
+            <a href="sales-services.html#sand-blasting-enquiries">Sand Blasting Machines</a>
+            <a href="sales-services.html#elastic-band-cutter-enquiries">Elastic Band Cutter</a>
+          </div>
+        </details>
+        <details class="nav-dropdown">
+          <summary>Download</summary>
+          <div class="dropdown-menu">
+            <a href="catalogue.html">Catalogue</a>
+          </div>
+        </details>
+        <a class="button header-cta" href="index.html#contact">Contact <span aria-hidden="true">›</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Testing confidence, <span>built to last.</span></h1>
+          <p>Quick Power presents a focused catalogue of equipment for environmental, plastic and rubber, and xenon arc testing applications.</p>
+          <div class="hero-actions">
+            <a class="button" href="#featured-products">Explore equipment <span aria-hidden="true">›</span></a>
+            <a class="button button--outline" href="#contact">Talk to our team</a>
+          </div>
+          <div class="hero-note">
+            <span class="hero-note-mark" aria-hidden="true">QP</span>
+            <span><strong>Quick Power</strong><br>Three focused testing categories</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-image-wrap">
+            <span class="shape shape--primary" aria-hidden="true"></span>
+            <span class="shape shape--accent" aria-hidden="true"></span>
+            <img class="hero-image" src="assets/quickpower-salt-spray-test-chamber.png" alt="Quick Power Salt Spray Test Chamber" fetchpriority="high">
+          </div>
+          <div class="hero-caption"><strong>Salt Spray Test Chamber</strong><span>Product photograph</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="product-categories">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Product range</p>
+          <h2>Testing solutions across industries</h2>
+          <p>Explore Quick Power's three testing equipment categories.</p>
+        </div>
+        <div class="category-grid">
+          <article class="category-card reveal" id="category-environmental" tabindex="0">
+            <img src="assets/quickpower-salt-spray-test-chamber.png" alt="Quick Power Salt Spray Test Chamber" loading="lazy">
+            <h3>Environmental Testing</h3>
+            <p>Salt Spray Test Chamber</p>
+            <a class="text-link" href="?product=salt-spray">View product <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="category-card reveal" id="category-plastic-rubber" tabindex="0">
+            <img src="assets/ozone-test-chamber-clean.png" alt="Ozone Test Chamber product photo" loading="lazy">
+            <h3>Plastic &amp; Rubber Testing</h3>
+            <p>Ozone Test Chamber</p>
+            <a class="text-link" href="?product=ozone">View product <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="category-card reveal" id="category-xenon-arc" tabindex="0">
+            <img src="assets/quickpower-xenon-arc-test-chamber-clean.png" alt="Quick Power Xenon Arc Test Chamber" loading="lazy">
+            <h3>Xenon Arc Testing</h3>
+            <p>Xenon Arc Test Chamber</p>
+            <a class="text-link" href="?product=xenon-arc">View product <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/quickpower-testing-equipment-range.png" alt="Quick Power testing equipment range, including environmental and materials testing instruments" loading="lazy">
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">About Quick Power</p>
+          <h2>Practical testing equipment for better decisions</h2>
+          <p>Quick Power's catalogue brings together laboratory equipment for environmental testing, plastic and rubber testing, and xenon arc testing.</p>
+          <p>Explore the three featured chambers to learn about their testing purpose, applications and published standards. Contact Quick Power for current model information.</p>
+          <ul class="about-points">
+            <li><span class="check" aria-hidden="true">✓</span><span>Three focused testing categories</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Environmental testing equipment</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Plastic and rubber testing equipment</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Xenon arc weathering equipment</span></li>
+          </ul>
+          <a class="button" href="#contact">Contact Quick Power <span aria-hidden="true">›</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="featured-products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured equipment</p>
+          <h2>Reliable instruments for material testing</h2>
+          <p>Explore selected products from the existing range. Contact the team for current model specifications and technical datasheets.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-image"><img src="assets/quickpower-salt-spray-test-chamber.png" alt="Quick Power Salt Spray Test Chamber" loading="lazy"></div>
+            <div class="product-copy">
+              <span class="product-label">Environmental Testing</span>
+              <h3>Salt Spray Test Chamber</h3>
+              <p>Evaluates corrosion resistance of metals, coatings and surface treatments in a controlled salt-fog environment.</p>
+              <a class="text-link" href="?product=salt-spray">View details <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-image"><img src="assets/ozone-test-chamber-clean.png" alt="Ozone Test Chamber product photo" loading="lazy"></div>
+            <div class="product-copy">
+              <span class="product-label">Plastic &amp; Rubber Testing</span>
+              <h3>Ozone Test Chamber</h3>
+              <p>Evaluates how rubber, plastics and coatings respond to ozone exposure under controlled test conditions.</p>
+              <a class="text-link" href="?product=ozone">View details <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <div class="product-image"><img src="assets/quickpower-xenon-arc-test-chamber-clean.png" alt="Quick Power Xenon Arc Test Chamber" loading="lazy"></div>
+            <div class="product-copy">
+              <span class="product-label">Xenon Arc Testing</span>
+              <h3>Xenon Arc Test Chamber</h3>
+              <p>Simulates sunlight, temperature and moisture to evaluate material weathering in a laboratory.</p>
+              <a class="text-link" href="?product=xenon-arc">View details <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="product-note">Images are for product identification and may be illustrative or supplied product photographs. For model-specific specifications and configurations, please request the latest product datasheet.</p>
+        <div class="products-footer"><a class="button button--outline" href="#product-categories">Browse the three categories <span aria-hidden="true">›</span></a></div>
+      </div>
+    </section>
+
+    <section class="proof-band" aria-label="Company information">
+      <div class="container proof-grid">
+        <div class="proof-item"><strong>Three categories</strong><span>Focused testing equipment catalogue</span></div>
+        <div class="proof-item"><strong>Product details</strong><span>Features and applications</span></div>
+        <div class="proof-item"><strong>Test standards</strong><span>Shown where published information is available</span></div>
+        <div class="proof-item"><strong>Quick Power</strong><span>Contact us for enquiries</span></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="why-us">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Quick Power</p>
+          <h2>Designed around real testing needs</h2>
+          <p>Find product information for the three testing chambers in Quick Power's catalogue.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card reveal"><span class="why-number">01 / RANGE</span><h3>Three testing categories</h3><p>Environmental, plastic and rubber, and xenon arc testing equipment.</p></article>
+          <article class="why-card reveal"><span class="why-number">02 / INFORMATION</span><h3>Product details at a glance</h3><p>Review published product features, applications and test standards where available.</p></article>
+          <article class="why-card reveal"><span class="why-number">03 / ENQUIRIES</span><h3>Contact Quick Power</h3><p>Get in touch for current product information and model-specific details.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="insights">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technical reading</p>
+          <h2>Testing methods and material insights</h2>
+          <p>Read more about testing methods, materials and laboratory equipment.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card blog-card--tensile reveal">
+            <img src="assets/quickpower-tensile-testing-machine.png" alt="Quick Power tensile testing machine holding a material sample between its grips" loading="lazy">
+            <div class="blog-copy">
+              <h3>How Does a Tensile Testing Machine Determine Breaking Point?</h3>
+              <p>An overview of how tensile testing helps identify material strength and failure behaviour.</p>
+              <details class="blog-readmore">
+                <summary>View it <span class="arrow" aria-hidden="true">→</span></summary>
+                <ul>
+                  <li>A prepared specimen is secured between the machine’s grips.</li>
+                  <li>The machine pulls the specimen at a controlled rate.</li>
+                  <li>A load cell measures the force applied during the test.</li>
+                  <li>The system records how far the specimen extends, producing a load–extension curve.</li>
+                  <li>Fracture is identified when the specimen breaks, typically with a sudden drop in measured load.</li>
+                  <li>The highest load before fracture is the maximum tensile load; tensile strength is calculated using the specimen’s original cross-sectional area.</li>
+                </ul>
+                <p>Results depend on the specimen, test method and machine setup; no product rating is implied.</p>
+              </details>
+            </div>
+          </article>
+          <article class="blog-card blog-card--salt-spray reveal">
+            <img src="assets/quickpower-salt-spray-procedure.jpeg" alt="Quick Power salt spray test chamber used for corrosion testing" loading="lazy">
+            <div class="blog-copy">
+              <h3>Salt Spray Test Procedure According to ASTM B117 Standards</h3>
+              <p>Explore the purpose and procedure of salt spray testing for corrosion evaluation.</p>
+              <details class="blog-readmore">
+                <summary>View it <span class="arrow" aria-hidden="true">→</span></summary>
+                <ul>
+                  <li>Prepare a salt solution and atomize it to create a fine fog inside the chamber.</li>
+                  <li>Place prepared specimens in the chamber so they are exposed to the fog without touching one another.</li>
+                  <li>Maintain the chamber conditions and salt-fog collection as specified by the applicable test procedure.</li>
+                  <li>Expose specimens for the duration selected by the test plan; ASTM B117 does not set a universal exposure time or pass/fail rating.</li>
+                  <li>After exposure, handle and assess the specimens using the agreed inspection procedure.</li>
+                  <li>Record observations such as corrosion or coating changes and compare them against the project’s acceptance criteria.</li>
+                </ul>
+                <p>Follow the current ASTM B117 edition and the applicable product instructions for the exact method and setup.</p>
+              </details>
+            </div>
+          </article>
+          <article class="blog-card blog-card--cyclic-corrosion reveal">
+            <img src="assets/quickpower-cyclic-corrosion.jpeg" alt="Quick Power cyclic corrosion test chamber with spray nozzles, viewing window and cycle controls" loading="lazy">
+            <div class="blog-copy">
+              <h3>How Cyclic Corrosion Chambers Simulate Real Conditions</h3>
+              <p>Learn how changing exposure cycles are used to simulate varied environments.</p>
+              <details class="blog-readmore">
+                <summary>View it <span class="arrow" aria-hidden="true">→</span></summary>
+                <ul>
+                  <li>Cycle through selected exposure stages, such as salt spray, humidity and drying, according to the test method.</li>
+                  <li>Apply each stage for its specified duration to reproduce changing environmental conditions.</li>
+                  <li>Repeat the sequence to observe how repeated wetting and drying affect materials and protective coatings.</li>
+                  <li>Use the chamber’s controlled cycle sequence to make tests more consistent and repeatable.</li>
+                  <li>Inspect specimens at defined intervals or after the test to document corrosion and coating changes.</li>
+                  <li>Compare results using the applicable test method and project acceptance criteria.</li>
+                </ul>
+                <p>Available stages, settings and cycle programs depend on the chamber model and selected test method.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2>Useful information, up front</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Which testing equipment does Quick Power offer?</summary>
+            <p>Quick Power’s featured range includes Salt Spray, Ozone and Xenon Arc Test Chambers. Contact Quick Power for current product availability and details.</p>
+          </details>
+          <details>
+            <summary>How can product enquiries be submitted?</summary>
+            <p>Enquiries may be submitted by phone, email or the online form. Include the intended application and product of interest to receive relevant information.</p>
+          </details>
+          <details>
+            <summary>How can product specifications or a quotation be requested?</summary>
+            <p>Submit the requirements through the enquiry form or contact Quick Power directly. Request the latest model-specific specifications and a quotation for the required product.</p>
+          </details>
+          <details>
+            <summary>How can suitable testing equipment be selected?</summary>
+            <p>Selection should consider the material and property to be evaluated, the applicable test method or standard, specimen size and testing requirements. Contact Quick Power to confirm current model capabilities and identify a suitable configuration.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="download">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Downloads</p>
+          <h2>Quick Power Product Catalogue</h2>
+          <p>Open the catalogue to browse the three featured testing products and their available details.</p>
+        </div>
+        <div class="products-footer"><a class="button" href="catalogue.html">Open Product Catalogue <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="contact-cta" aria-label="Contact Quick Power">
+      <div class="container contact-cta-inner">
+        <h2>Need help selecting a testing instrument?</h2>
+        <a class="button" href="#contact">Talk to our team <span aria-hidden="true">›</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact us</p>
+          <h2>Tell us what you need to test</h2>
+          <p>Share your application and our team can help you find the right information.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Quick Power</h3>
+            <p>Contact us about product information, current specifications or an enquiry.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">A</span>
+                <div><strong>Address</strong><span>No 13 A, 21st Street, Ashtalakshmi Nagar, Alappakkam, Chennai, Tamil Nadu - 600 116</span></div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">P</span>
+                <div><strong>Phone</strong><a href="tel:+919384871049">+91 9384871049</a><br><a href="tel:+919944363907">+91 9944363907</a></div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">@</span>
+                <div><strong>Email</strong><a href="mailto:info@quickpowers.co.in">info@quickpowers.co.in</a></div>
+              </div>
+            </div>
+            <iframe class="map-frame" title="Map showing Quick Power in Chennai" src="https://maps.google.com/maps?q=No%2013%20A%2C%2021st%20Street%2C%20Ashtalakshmi%20Nagar%2C%20Alappakkam%2C%20Chennai%2C%20Tamil%20Nadu%20-%20600%20116&t=m&z=14&output=embed&iwloc=near" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <form class="contact-form reveal" id="enquiry-form">
+            <h3>Send an enquiry</h3>
+            <p>Complete the form to open a ready-to-send email in your email application.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" required></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+() .-]{7,20}" placeholder="+91" required></div>
+              <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" placeholder="Product or application" required></div>
+              <div class="field field--wide"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what you need to test" required></textarea></div>
+            </div>
+            <div class="form-footer">
+              <button class="button" type="submit">Send an enquiry <span aria-hidden="true">›</span></button>
+              <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </div>
+            <p class="form-note">Your details are used only to prepare the email. You must send the message from your email app to complete your enquiry.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="section product-detail" id="product-detail" hidden aria-live="polite">
+      <div class="container">
+        <p class="product-detail-breadcrumb"><a href="index.html#home">Home</a> / <a href="index.html#product-categories">Products</a> / <span id="product-detail-name"></span></p>
+        <div class="product-detail-content" id="product-detail-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#home" aria-label="Back to Quick Power home">
+          <svg class="footer-cloud-shape" viewBox="0 0 240 150" aria-hidden="true" focusable="false">
+            <path d="M56 126C32 126 15 109 15 87c0-20 15-37 36-39 2-23 20-39 43-39 19 0 35 11 41 28 8-16 24-25 42-22 22 3 36 21 35 42 17 2 29 16 29 33 0 20-16 36-37 36H56Z" fill="#E9F7F6" stroke="#009F9A" stroke-width="3"/>
+          </svg>
+          <img src="assets/quick-power-logo-footer.png" alt="Quick Power logo with the brand name in a clean modern wordmark">
+        </a>
+        <p>Laboratory testing instruments for environmental, plastic and rubber, and xenon arc applications.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick links</h3>
+        <div class="footer-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About us</a>
+          <a href="index.html#product-categories">Products</a>
+          <a href="sales-services.html">Sales &amp; Services</a>
+          <a href="catalogue.html">Download</a>
+          <a href="index.html#contact">Contact us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Get in touch</h3>
+        <div class="footer-links">
+          <a href="tel:+919384871049">+91 9384871049</a>
+          <a href="tel:+919944363907">+91 9944363907</a>
+          <a href="mailto:info@quickpowers.co.in">info@quickpowers.co.in</a>
+          <span>No 13 A, 21st Street, Ashtalakshmi Nagar, Alappakkam, Chennai, Tamil Nadu - 600 116</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="current-year">2026</span> Quick Power — Developed and maintained by Code Core Global HiTech Solutions.</span>
+        <a href="index.html#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/919384871049?text=Hello%20Quick%20Power%2C%20I%20have%20an%20equipment%20enquiry." aria-label="Contact Quick Power on WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.4 28.7l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.2c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A10.4 10.4 0 1 1 16 26.4Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.2-.3-.3-.6-.5Z"/></svg></a>
+
+  <script>
+    document.documentElement.classList.add("js");
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-nav");
+    const closeMenu = () => {
+      navigation.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+    };
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      const link = event.target.closest("a");
+      if (link) {
+        closeMenu();
+        link.closest(".nav-dropdown")?.removeAttribute("open");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        document.querySelectorAll(".nav-dropdown[open]").forEach((dropdown) => dropdown.removeAttribute("open"));
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".nav-dropdown")) {
+        document.querySelectorAll(".nav-dropdown[open]").forEach((dropdown) => dropdown.removeAttribute("open"));
+      }
+    });
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
+
+    const categoryCards = document.querySelectorAll(".category-card");
+    const selectCategoryCard = (card) => {
+      categoryCards.forEach((item) => item.classList.toggle("is-selected", item === card));
+    };
+    categoryCards.forEach((card) => {
+      card.addEventListener("pointerdown", () => selectCategoryCard(card));
+      card.addEventListener("click", () => selectCategoryCard(card));
+      card.addEventListener("focus", () => selectCategoryCard(card));
+    });
+
+    document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+
+    const products = {
+      "salt-spray": {
+        category: "Environmental Testing",
+        name: "Salt Spray Test Chamber",
+        image: "assets/quickpower-salt-spray-test-chamber.png",
+        description: "A controlled salt-fog test chamber for evaluating the corrosion resistance of metals, coatings, paints and surface treatments.",
+        introduction: "The chamber atomizes a sodium chloride solution to create an accelerated corrosive environment. Test results help compare the corrosion resistance of materials and surface finishes.",
+        features: [
+          "Creates a controlled salt-fog environment for corrosion evaluation",
+          "Atomizes a sodium chloride solution for salt-fog exposure",
+          "Helps assess corrosion resistance of metals and coated materials",
+          "Supports comparison of paints, coatings and surface treatments",
+          "Relevant to automotive, aerospace, marine and electronics applications",
+          "Confirm model-specific settings and capacity using the current datasheet"
+        ],
+        specificationRows: [
+          ["Exposure method", "Salt-fog exposure using an atomized sodium chloride solution"],
+          ["Evaluation", "Corrosion resistance and comparison of material or surface-finish performance"],
+          ["Materials evaluated", "Metals, coatings, paints and surface treatments"],
+          ["Model-specific settings and capacity", "Confirm using the current model datasheet"]
+        ],
+        applications: [
+          "Corrosion resistance evaluation for metals, coatings and surface treatments",
+          "Automotive, aerospace, consumer electronics and marine hardware testing"
+        ],
+      },
+      ozone: {
+        category: "Plastic & Rubber Testing",
+        name: "Ozone Test Chamber",
+        image: "assets/ozone-test-chamber-clean.png",
+        description: "A laboratory chamber for evaluating how materials respond to controlled ozone exposure.",
+        introduction: "Ozone exposure testing helps assess aging effects such as cracking and loss of elasticity in materials including rubber, plastics and coatings.",
+        features: [
+          "Provides controlled ozone exposure for material evaluation",
+          "Helps assess ozone-related aging effects such as cracking and loss of elasticity"
+        ],
+        specificationRows: [
+          ["Exposure method", "Controlled ozone exposure"],
+          ["Evaluation", "Ozone-related aging, including cracking and loss of elasticity"],
+          ["Materials evaluated", "Rubber, plastics and coatings"],
+          ["Model-specific settings and capacity", "Confirm using the current model datasheet"]
+        ],
+        applications: [
+          "Ozone-aging evaluation of rubber products",
+          "Testing plastics, coatings and other ozone-exposed materials"
+        ],
+      },
+      "xenon-arc": {
+        category: "Xenon Arc Testing",
+        name: "Xenon Arc Test Chamber",
+        image: "assets/quickpower-xenon-arc-test-chamber-clean.png",
+        description: "A weathering test chamber that simulates sunlight across ultraviolet, visible and infrared wavelengths.",
+        introduction: "Xenon arc testing combines light exposure with controlled environmental conditions to help evaluate material weathering and durability.",
+        features: [
+          "Uses xenon arc light exposure to simulate sunlight for weathering evaluation",
+          "Combines light exposure with controlled environmental conditions"
+        ],
+        specificationRows: [
+          ["Exposure method", "Xenon arc light exposure combined with controlled environmental conditions"],
+          ["Evaluation", "Material weathering and durability"],
+          ["Materials evaluated", "Paints, coatings, plastics, textiles, construction materials and electronics"],
+          ["Model-specific settings and capacity", "Confirm using the current model datasheet"]
+        ],
+        applications: [
+          "Weathering assessment for automotive and aerospace materials",
+          "Testing paints, coatings, plastics, textiles, construction materials and electronics"
+        ],
+      }
+    };
+
+    const selectedProduct = new URLSearchParams(window.location.search).get("product");
+    if (selectedProduct && products[selectedProduct]) {
+      const product = products[selectedProduct];
+      const detail = document.querySelector("#product-detail");
+      document.querySelectorAll("main > section:not(#product-detail)").forEach((section) => {
+        section.hidden = true;
+      });
+      detail.hidden = false;
+      document.querySelector("#product-detail-name").textContent = product.name;
+      document.querySelector("#product-detail-content").innerHTML = `
+        <div class="product-detail-grid">
+          <div class="product-detail-visual">
+            <img src="${product.image}" alt="${product.name} product image" fetchpriority="high">
+          </div>
+          <div class="product-detail-copy">
+            <p class="eyebrow">${product.category}</p>
+            <h1>${product.name}</h1>
+            <p><strong>${product.description}</strong></p>
+            <p>${product.introduction}</p>
+            ${product.features.length ? `<h2>Product information</h2><ul>${product.features.map((feature) => `<li>${feature}</li>`).join("")}</ul>` : ""}
+            <h2>Applications</h2>
+            <ul>${product.applications.map((application) => `<li>${application}</li>`).join("")}</ul>
+          </div>
+        </div>
+        <section class="product-detail-specifications" aria-labelledby="product-specifications-heading">
+          <h2 id="product-specifications-heading">Product Specification Overview</h2>
+          <div class="product-detail-table-wrap" role="region" aria-label="${product.name} specification overview" tabindex="0">
+            <table class="product-detail-table">
+              <thead><tr><th scope="col">Specification</th><th scope="col">Details</th></tr></thead>
+              <tbody>${product.specificationRows.map(([label, value]) => `<tr><th scope="row">${label}</th><td>${value}</td></tr>`).join("")}</tbody>
+            </table>
+          </div>
+          <p class="product-detail-specification-note">Exact operating ranges, chamber capacity and supported standards vary by model and should be confirmed from the current product datasheet.</p>
+        </section>
+        <p class="product-note">Request the current model datasheet for model-specific technical specifications.</p>
+        <div class="products-footer"><a class="button" href="index.html#contact">Enquire about this product <span aria-hidden="true">›</span></a></div>
+        <p class="product-visual-note">Image is for product identification; model-specific appearance may vary.</p>`;
+      document.title = `${product.name} | Quick Power`;
+      document.querySelector('meta[name="description"]').content = product.description;
+    }
+
+    document.querySelector("#enquiry-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const message = document.querySelector("#form-message");
+      if (!form.reportValidity()) {
+        message.textContent = "Please complete all required fields with valid contact details.";
+        return;
+      }
+
+      const data = new FormData(form);
+      const subject = String(data.get("subject")).trim();
+      const body = [
+        `Name: ${String(data.get("name")).trim()}`,
+        `Email: ${String(data.get("email")).trim()}`,
+        `Phone: ${String(data.get("phone")).trim()}`,
+        "",
+        String(data.get("message")).trim()
+      ].join("\n");
+      const mailto = `mailto:info@quickpowers.co.in?${new URLSearchParams({ subject, body })}`;
+      message.textContent = "Your email app should open with the enquiry. Send the prepared email to complete your request.";
+      window.location.href = mailto;
+    });
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSZXFRHY6W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-PSZXFRHY6W");
+  </script>
+  <script>
+    (function(w, d, s, l, id) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var firstScript = d.getElementsByTagName(s)[0];
+      var tag = d.createElement(s);
+      var layer = l !== "dataLayer" ? "&l=" + l : "";
+      tag.async = true;
+      tag.src = "https://www.googletagmanager.com/gtm.js?id=" + id + layer;
+      firstScript.parentNode.insertBefore(tag, firstScript);
+    })(window, document, "script", "dataLayer", "GTM-MZJZNP6Z");
+  </script>
+  <script>
+    (function(w, d) {
+      w.CollectId = "66d85d7bf4318a97acfb9062";
+      var head = d.head || d.getElementsByTagName("head")[0];
+      var script = d.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = "https://collectcdn.com/launcher.js";
+      head.appendChild(script);
+    })(window, document);
+  </script>
+</body>
+</html>
